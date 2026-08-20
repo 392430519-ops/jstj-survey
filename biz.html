@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0286)https://static.coze.site/3102155807137564_0-data_volume/7660321289407774991-files/%E6%89%80%E6%9C%89%E5%AF%B9%E8%AF%9D/%E4%B8%BB%E5%AF%B9%E8%AF%9D/%E9%83%A8%E7%BD%B2%E6%96%87%E4%BB%B6_biz.html?sign=1789724482-9ba58988c5-0-b7d3fc18c45fbd0c572438438ec9066bb655f6d9aca02fd68985b83cc7fc0aea -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业务受理与实验室协作情况调查问卷（业务受理版）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f0f4f8;color:#1a202c;line-height:1.6}
+.survey-container{max-width:760px;margin:0 auto;padding:16px}
+.survey-header{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;padding:32px 24px;border-radius:16px;margin-bottom:20px;text-align:center;position:relative}
+.survey-header h1{font-size:22px;margin-bottom:12px;line-height:1.4}
+.survey-header p{font-size:14px;opacity:.9;line-height:1.7}
+.top-actions{position:absolute;top:12px;right:16px;display:flex;gap:8px}
+.top-actions button{background:rgba(255,255,255,.2);border:none;color:#fff;padding:6px 12px;border-radius:8px;cursor:pointer;font-size:14px;transition:.2s}
+.top-actions button:hover{background:rgba(255,255,255,.35)}
+.progress-wrap{position:sticky;top:0;z-index:100;background:#fff;padding:8px 16px;border-radius:12px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.progress-bar{height:6px;background:#e2e8f0;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#1e40af);border-radius:3px;transition:width .3s;width:0}
+.progress-text{font-size:12px;color:#64748b;text-align:right;margin-top:4px}
+.question-card{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:.2s}
+.question-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.q-header{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.q-num{background:#3b82f6;color:#fff;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;white-space:nowrap}
+.q-type{font-size:12px;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:6px;white-space:nowrap}
+.q-text{font-size:15px;font-weight:500;flex:1}
+.options-list{display:flex;flex-direction:column;gap:8px}
+.option-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:10px;cursor:pointer;transition:.2s;font-size:14px}
+.option-item:hover{border-color:#93c5fd;background:#eff6ff}
+.option-item.selected{border-color:#3b82f6;background:#eff6ff}
+.option-item input{accent-color:#3b82f6;width:16px;height:16px;flex-shrink:0}
+.matrix-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.matrix-table th{background:#f1f5f9;padding:8px 6px;text-align:center;font-weight:500;border:1px solid #e2e8f0}
+.matrix-table td{padding:8px 6px;text-align:center;border:1px solid #e2e8f0}
+.matrix-table tr:hover{background:#f8fafc}
+.matrix-label{text-align:left!important;font-size:13px;min-width:180px}
+textarea{width:100%;min-height:80px;padding:12px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;resize:vertical;transition:.2s;font-family:inherit}
+textarea:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+select.rank-select{padding:4px 8px;border:1.5px solid #cbd5e1;border-radius:6px;font-size:13px;background:#fff}
+.rank-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.rank-table td{padding:10px 8px;border:1px solid #e2e8f0}
+.rank-table tr:hover{background:#f8fafc}
+.submit-area{text-align:center;padding:24px 0}
+.submit-btn{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;border:none;padding:14px 48px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;transition:.2s}
+.submit-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(30,64,175,.3)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.success-page{text-align:center;padding:60px 24px}
+.success-page .icon{font-size:64px;margin-bottom:16px}
+.success-page h2{color:#1e40af;margin-bottom:12px}
+.success-page p{color:#64748b}
+.already-done{text-align:center;padding:60px 24px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal{background:#fff;border-radius:16px;padding:24px;max-width:600px;width:90%;max-height:85vh;overflow-y:auto}
+.modal h3{margin-bottom:16px;color:#1e40af}
+.modal label{display:block;font-size:14px;margin-bottom:6px;font-weight:500}
+.modal input[type=text],.modal input[type=password]{width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;margin-bottom:14px}
+.modal .btn-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.btn{padding:8px 20px;border:none;border-radius:8px;font-size:14px;cursor:pointer;transition:.2s;font-weight:500}
+.btn-primary{background:#3b82f6;color:#fff}.btn-primary:hover{background:#2563eb}
+.btn-secondary{background:#e2e8f0;color:#475569}.btn-secondary:hover{background:#cbd5e1}
+.btn-danger{background:#ef4444;color:#fff}.btn-danger:hover{background:#dc2626}
+.btn-success{background:#10b981;color:#fff}.btn-success:hover{background:#059669}
+.link-box{background:#f1f5f9;padding:10px;border-radius:8px;word-break:break-all;font-size:12px;margin-top:10px;font-family:monospace}
+.summary-section{margin-top:16px;padding:16px;background:#f8fafc;border-radius:10px}
+.summary-section h4{color:#1e40af;margin-bottom:10px;font-size:15px}
+.stat-bar-wrap{margin-bottom:10px}
+.stat-bar-label{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}
+.stat-bar{height:20px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.stat-bar-fill{height:100%;border-radius:4px;transition:width .5s;display:flex;align-items:center;padding-left:6px;font-size:11px;color:#fff;font-weight:500}
+.colors-0{background:#3b82f6}.colors-1{background:#10b981}.colors-2{background:#f59e0b}.colors-3{background:#ef4444}.colors-4{background:#8b5cf6}.colors-5{background:#ec4899}
+.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);padding:12px 24px;border-radius:10px;color:#fff;font-size:14px;z-index:2000;display:none;animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.toast-success{background:#10b981}
+.toast-error{background:#ef4444}
+.toast-info{background:#3b82f6}
+.loading{display:inline-block;width:16px;height:16px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:640px){.survey-header h1{font-size:18px}.survey-header p{font-size:13px}.question-card{padding:16px}.matrix-label{min-width:120px}}
+</style>
+</head>
+<body>
+<div class="survey-container" id="app">
+  <!-- Loading -->
+  <div id="loadingPage" style="text-align: center; padding: 60px; display: none;"><span class="loading" style="border-color:#3b82f6;border-top-color:transparent;width:32px;height:32px"></span><p style="color:#64748b;margin-top:12px">加载中...</p></div>
+
+  <!-- Already submitted -->
+  <div id="alreadyPage" style="display:none" class="already-done">
+    <div style="font-size:64px">✅</div>
+    <h2 style="color:#1e40af;margin:16px 0">感谢参与，您已完成本问卷</h2>
+    <p style="color:#64748b">每位用户仅需提交一次，感谢您的配合！</p>
+  </div>
+
+  <!-- Main Survey -->
+  <div id="surveyPage" style="display: block;">
+    <div class="survey-header">
+      <div class="top-actions">
+        <button onclick="showConfigModal()" title="管理员配置">🔧</button>
+        <button id="summaryBtn" onclick="showSummaryModal()" style="display:none" title="数据汇总">📊</button>
+      </div>
+      <h1>业务受理与实验室协作情况调查问卷<br>（业务受理版）</h1>
+      <p>本问卷采用无记名方式，为摸清业务受理与实验室在协作中存在的真实问题，为优化流程、培训和管理决策提供依据，请抛开业务人员身份，以业务受理人员身份如实填写，请不要有顾虑，给出最真实的"吐槽"，匿名，欢迎大胆参与。</p>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%;"></div></div>
+      <div class="progress-text" id="progressText">0 / 27 已作答 (0%)</div>
+    </div>
+    <form id="surveyForm"><div class="question-card" id="card_Q1"><div class="q-header"><span class="q-num">Q1</span><span class="q-text">您所在的部门</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q1&#39;,this)"><input type="radio" name="Q1" value="业务受理/大厅窗口"><span>业务受理/大厅窗口</span></label><label class="option-item" onclick="selectRadio(&#39;Q1&#39;,this)"><input type="radio" name="Q1" value="实验室"><span>实验室</span></label><label class="option-item" onclick="selectRadio(&#39;Q1&#39;,this)"><input type="radio" name="Q1" value="其他职能部门"><span>其他职能部门</span></label></div></div><div class="question-card" id="card_Q2"><div class="q-header"><span class="q-num">Q2</span><span class="q-text">您在本岗位的工作年限</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q2&#39;,this)"><input type="radio" name="Q2" value="1年以下"><span>1年以下</span></label><label class="option-item" onclick="selectRadio(&#39;Q2&#39;,this)"><input type="radio" name="Q2" value="1-3年"><span>1-3年</span></label><label class="option-item" onclick="selectRadio(&#39;Q2&#39;,this)"><input type="radio" name="Q2" value="3-5年"><span>3-5年</span></label><label class="option-item" onclick="selectRadio(&#39;Q2&#39;,this)"><input type="radio" name="Q2" value="5年以上"><span>5年以上</span></label></div></div><div class="question-card" id="card_Q3"><div class="q-header"><span class="q-num">Q3</span><span class="q-text">您是否曾有过跨部门（实验室/业务受理）轮岗或借调的经历？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q3&#39;,this)"><input type="radio" name="Q3" value="有，且时间较长（&gt;3个月）"><span>有，且时间较长（&gt;3个月）</span></label><label class="option-item" onclick="selectRadio(&#39;Q3&#39;,this)"><input type="radio" name="Q3" value="有，但时间较短（&lt;3个月）"><span>有，但时间较短（&lt;3个月）</span></label><label class="option-item" onclick="selectRadio(&#39;Q3&#39;,this)"><input type="radio" name="Q3" value="没有，但了解对方工作内容"><span>没有，但了解对方工作内容</span></label><label class="option-item" onclick="selectRadio(&#39;Q3&#39;,this)"><input type="radio" name="Q3" value="完全没有接触过"><span>完全没有接触过</span></label></div></div><div class="question-card" id="card_Q4"><div class="q-header"><span class="q-num">Q4</span><span class="q-text">您与对方部门日常沟通的频率？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q4&#39;,this)"><input type="radio" name="Q4" value="每天多次"><span>每天多次</span></label><label class="option-item" onclick="selectRadio(&#39;Q4&#39;,this)"><input type="radio" name="Q4" value="每天1-2次"><span>每天1-2次</span></label><label class="option-item" onclick="selectRadio(&#39;Q4&#39;,this)"><input type="radio" name="Q4" value="每周几次"><span>每周几次</span></label><label class="option-item" onclick="selectRadio(&#39;Q4&#39;,this)"><input type="radio" name="Q4" value="很少沟通"><span>很少沟通</span></label></div></div><div class="question-card" id="card_Q5"><div class="q-header"><span class="q-num">Q5</span><span class="q-text">您与对方部门沟通的主要方式是？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q5" value="当面沟通"><span>当面沟通</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q5" value="电话"><span>电话</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q5" value="微信/工作群"><span>微信/工作群</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q5" value="书面交接单"><span>书面交接单</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q5" value="其他"><span>其他</span></label></div></div><div class="question-card" id="card_Q6"><div class="q-header"><span class="q-num">Q6</span><span class="q-text">您对每天沟通的感受？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q6&#39;,this)"><input type="radio" name="Q6" value="对方立即解决问题，感觉很好"><span>对方立即解决问题，感觉很好</span></label><label class="option-item" onclick="selectRadio(&#39;Q6&#39;,this)"><input type="radio" name="Q6" value="对方有情绪，不想沟通"><span>对方有情绪，不想沟通</span></label><label class="option-item" onclick="selectRadio(&#39;Q6&#39;,this)"><input type="radio" name="Q6" value="说不清问题，反复沟通，很影响工作，很烦"><span>说不清问题，反复沟通，很影响工作，很烦</span></label><label class="option-item" onclick="selectRadio(&#39;Q6&#39;,this)"><input type="radio" name="Q6" value="一说问题需要逐级汇报，等到天荒地老"><span>一说问题需要逐级汇报，等到天荒地老</span></label><label class="option-item" onclick="selectRadio(&#39;Q6&#39;,this)"><input type="radio" name="Q6" value="天天都是一样的问题，沟通没有改善，真不想沟通"><span>天天都是一样的问题，沟通没有改善，真不想沟通</span></label></div></div><div class="question-card" id="card_Q7"><div class="q-header"><span class="q-num">Q7</span><span class="q-text">您是否了解本机构现行的质量管理体系？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q7&#39;,this)"><input type="radio" name="Q7" value="非常了解，能清晰说出主要框架"><span>非常了解，能清晰说出主要框架</span></label><label class="option-item" onclick="selectRadio(&#39;Q7&#39;,this)"><input type="radio" name="Q7" value="了解基本概念，大概知道有这些文件"><span>了解基本概念，大概知道有这些文件</span></label><label class="option-item" onclick="selectRadio(&#39;Q7&#39;,this)"><input type="radio" name="Q7" value="知道有体系这回事，但不太清楚具体内容"><span>知道有体系这回事，但不太清楚具体内容</span></label><label class="option-item" onclick="selectRadio(&#39;Q7&#39;,this)"><input type="radio" name="Q7" value="完全不了解，甚至没听说过"><span>完全不了解，甚至没听说过</span></label></div></div><div class="question-card" id="card_Q8"><div class="q-header"><span class="q-num">Q8</span><span class="q-text">您是否清楚与自己岗位相关的体系文件（如《程序文件》《作业指导书》）的具体名称和编号？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q8&#39;,this)"><input type="radio" name="Q8" value="清楚，能准确说出2个以上"><span>清楚，能准确说出2个以上</span></label><label class="option-item" onclick="selectRadio(&#39;Q8&#39;,this)"><input type="radio" name="Q8" value="知道大概有相关文件，但说不出来具体内容"><span>知道大概有相关文件，但说不出来具体内容</span></label><label class="option-item" onclick="selectRadio(&#39;Q8&#39;,this)"><input type="radio" name="Q8" value="不清楚，从未关注过体系文件"><span>不清楚，从未关注过体系文件</span></label></div></div><div class="question-card" id="card_Q9"><div class="q-header"><span class="q-num">Q9</span><span class="q-text">当遇到客户要求、受理信息与检测标准要求冲突时（如样品量不够、方法不合适等），您是否能独立依据体系要求判断"做不了"并合理解释给客户？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q9&#39;,this)"><input type="radio" name="Q9" value="完全可以，我能独立判断并解释法规依据"><span>完全可以，我能独立判断并解释法规依据</span></label><label class="option-item" onclick="selectRadio(&#39;Q9&#39;,this)"><input type="radio" name="Q9" value="基本可以，遇到特别复杂的需要请教质量/技术负责人"><span>基本可以，遇到特别复杂的需要请教质量/技术负责人</span></label><label class="option-item" onclick="selectRadio(&#39;Q9&#39;,this)"><input type="radio" name="Q9" value="不太行，我拿不准哪些能做哪些不能做"><span>不太行，我拿不准哪些能做哪些不能做</span></label><label class="option-item" onclick="selectRadio(&#39;Q9&#39;,this)"><input type="radio" name="Q9" value="完全不行，我会直接找实验室或技术质量管理部"><span>完全不行，我会直接找实验室或技术质量管理部</span></label></div></div><div class="question-card" id="card_Q10"><div class="q-header"><span class="q-num">Q10</span><span class="q-text">您是否清楚本机构针对业务受理环节的"质量目标"（如差错率、客户满意度、受理时限等）具体是多少？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q10&#39;,this)"><input type="radio" name="Q10" value="非常清楚，知道具体数值"><span>非常清楚，知道具体数值</span></label><label class="option-item" onclick="selectRadio(&#39;Q10&#39;,this)"><input type="radio" name="Q10" value="有印象，但不记得具体数"><span>有印象，但不记得具体数</span></label><label class="option-item" onclick="selectRadio(&#39;Q10&#39;,this)"><input type="radio" name="Q10" value="没听说过有这类指标"><span>没听说过有这类指标</span></label><label class="option-item" onclick="selectRadio(&#39;Q10&#39;,this)"><input type="radio" name="Q10" value="不太关心"><span>不太关心</span></label></div></div><div class="question-card" id="card_Q11"><div class="q-header"><span class="q-num">Q11</span><span class="q-text">您了解单位的资质情况吗？受理时会考虑资质范围吗？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q11&#39;,this)"><input type="radio" name="Q11" value="了解，受理时会核查资质情况，避免超范围"><span>了解，受理时会核查资质情况，避免超范围</span></label><label class="option-item" onclick="selectRadio(&#39;Q11&#39;,this)"><input type="radio" name="Q11" value="大概了解，常做的清楚，需要时会问一下资质情况"><span>大概了解，常做的清楚，需要时会问一下资质情况</span></label><label class="option-item" onclick="selectRadio(&#39;Q11&#39;,this)"><input type="radio" name="Q11" value="不了解，如果有问题实验室或报告会反馈，等反馈"><span>不了解，如果有问题实验室或报告会反馈，等反馈</span></label><label class="option-item" onclick="selectRadio(&#39;Q11&#39;,this)"><input type="radio" name="Q11" value="不太关心"><span>不太关心</span></label></div></div><div class="question-card" id="card_Q12"><div class="q-header"><span class="q-num">Q12</span><span class="q-text">您在新规定（例："一单一库"）出台后主动学习吗？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q12&#39;,this)"><input type="radio" name="Q12" value="主动学习"><span>主动学习</span></label><label class="option-item" onclick="selectRadio(&#39;Q12&#39;,this)"><input type="radio" name="Q12" value="别人咋受理我跟着受理，具体内容不了解"><span>别人咋受理我跟着受理，具体内容不了解</span></label><label class="option-item" onclick="selectRadio(&#39;Q12&#39;,this)"><input type="radio" name="Q12" value="不关心"><span>不关心</span></label></div></div><div class="question-card" id="card_Q13"><div class="q-header"><span class="q-num">Q13</span><span class="q-text">请根据您对以下专业知识的掌握程度进行自评：</span><span class="q-type">自评</span></div><div style="overflow-x:auto"><table class="matrix-table"><thead><tr><th class="matrix-label">评估项目</th><th>掌握较好可独立运用</th><th>大概了解需要时能查资料</th><th>基本不懂遇到就求助</th><th>认为不属于职责范围</th></tr></thead><tbody><tr><td class="matrix-label">产品/样品的分类及命名规则（例如机织物、针织物、非织造布；服装用、家用、工业用纺织品）</td><td><input type="radio" name="Q13_item0" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item0" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item0" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item0" value="认为不属于职责范围" onchange="updateProgress()"></td></tr><tr><td class="matrix-label">常用检测方法标准的编号与适用范围</td><td><input type="radio" name="Q13_item1" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item1" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item1" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item1" value="认为不属于职责范围" onchange="updateProgress()"></td></tr><tr><td class="matrix-label">不同产品对应的强制性标准清单及主要指标</td><td><input type="radio" name="Q13_item2" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item2" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item2" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item2" value="认为不属于职责范围" onchange="updateProgress()"></td></tr><tr><td class="matrix-label">取样方法与样品量基础知识</td><td><input type="radio" name="Q13_item3" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item3" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item3" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item3" value="认为不属于职责范围" onchange="updateProgress()"></td></tr><tr><td class="matrix-label">实验室常见检测项目的技术原理（如pH、甲醛、色牢度基本含义）</td><td><input type="radio" name="Q13_item4" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item4" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item4" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item4" value="认为不属于职责范围" onchange="updateProgress()"></td></tr><tr><td class="matrix-label">仪器设备对样品状态的基本要求（如温湿度平衡、样品尺寸）</td><td><input type="radio" name="Q13_item5" value="掌握较好可独立运用" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item5" value="大概了解需要时能查资料" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item5" value="基本不懂遇到就求助" onchange="updateProgress()"></td><td><input type="radio" name="Q13_item5" value="认为不属于职责范围" onchange="updateProgress()"></td></tr></tbody></table></div></div><div class="question-card" id="card_Q14"><div class="q-header"><span class="q-num">Q14</span><span class="q-text">当客户口头描述一种产品（如"儿童T恤"、"休闲鞋"），您是否能快速判断出需要引用哪些强制性标准和产品标准？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q14&#39;,this)"><input type="radio" name="Q14" value="完全可以，能迅速对应到具体标准"><span>完全可以，能迅速对应到具体标准</span></label><label class="option-item" onclick="selectRadio(&#39;Q14&#39;,this)"><input type="radio" name="Q14" value="基本可以，能想到大类但需要查标准号"><span>基本可以，能想到大类但需要查标准号</span></label><label class="option-item" onclick="selectRadio(&#39;Q14&#39;,this)"><input type="radio" name="Q14" value="不太能，只能模糊判断需要反复问实验室或其他受理人员"><span>不太能，只能模糊判断需要反复问实验室或其他受理人员</span></label><label class="option-item" onclick="selectRadio(&#39;Q14&#39;,this)"><input type="radio" name="Q14" value="完全不行"><span>完全不行</span></label></div></div><div class="question-card" id="card_Q15"><div class="q-header"><span class="q-num">Q15</span><span class="q-text">您获取检测标准知识的主要渠道是？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="入职培训"><span>入职培训</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="在工作中遇到问题向实验室请教"><span>在工作中遇到问题向实验室请教</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="在工作中遇到问题向其他业务受理人员请教"><span>在工作中遇到问题向其他业务受理人员请教</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="自己主动查阅标准文件"><span>自己主动查阅标准文件</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="参加单位组织的技术培训"><span>参加单位组织的技术培训</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q15" value="很少主动学习这方面知识"><span>很少主动学习这方面知识</span></label></div></div><div class="question-card" id="card_Q16"><div class="q-header"><span class="q-num">Q16</span><span class="q-text">在受理一项不常见产品的检测委托时，您通常的做法是？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q16&#39;,this)"><input type="radio" name="Q16" value="自行查阅标准文件后判定受理条件"><span>自行查阅标准文件后判定受理条件</span></label><label class="option-item" onclick="selectRadio(&#39;Q16&#39;,this)"><input type="radio" name="Q16" value="电话或当面咨询对应专业实验室的技术人员"><span>电话或当面咨询对应专业实验室的技术人员</span></label><label class="option-item" onclick="selectRadio(&#39;Q16&#39;,this)"><input type="radio" name="Q16" value="参考历史委托单按同样要求操作"><span>参考历史委托单按同样要求操作</span></label><label class="option-item" onclick="selectRadio(&#39;Q16&#39;,this)"><input type="radio" name="Q16" value="先受理下来，等实验室打回沟通的为准"><span>先受理下来，等实验室打回沟通的为准</span></label><label class="option-item" onclick="selectRadio(&#39;Q16&#39;,this)"><input type="radio" name="Q16" value="不确定，随机应变"><span>不确定，随机应变</span></label></div></div><div class="question-card" id="card_Q17"><div class="q-header"><span class="q-num">Q17</span><span class="q-text">在将检测任务交接给实验室前，您通常如何确认样品信息？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q17" value="严格按照委托单逐项核对"><span>严格按照委托单逐项核对</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q17" value="凭经验判断，确认重点项目"><span>凭经验判断，确认重点项目</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q17" value="遇到模糊描述时，习惯先提交，由实验室反馈后再修改"><span>遇到模糊描述时，习惯先提交，由实验室反馈后再修改</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q17" value="直接打电话问实验室该怎么做"><span>直接打电话问实验室该怎么做</span></label></div></div><div class="question-card" id="card_Q18"><div class="q-header"><span class="q-num">Q18</span><span class="q-text">在向实验室移交样品和委托单时，您觉得最困难/最容易出错的环节是？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="样品信息描述不规范"><span>样品信息描述不规范</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="分板不准确"><span>分板不准确</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="检测方法/标准选择错误（易混淆的国标/行标）"><span>检测方法/标准选择错误（易混淆的国标/行标）</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="样品数量不足或状态不符合要求"><span>样品数量不足或状态不符合要求</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="客户特殊要求记录不清"><span>客户特殊要求记录不清</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="标准有偏离不会备注"><span>标准有偏离不会备注</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q18" value="系统录入时关键信息漏填"><span>系统录入时关键信息漏填</span></label></div></div><div class="question-card" id="card_Q19"><div class="q-header"><span class="q-num">Q19</span><span class="q-text">当实验室退回或质疑您的受理信息时，您通常的感觉是？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q19&#39;,this)"><input type="radio" name="Q19" value="确实是我不小心弄错了，马上改"><span>确实是我不小心弄错了，马上改</span></label><label class="option-item" onclick="selectRadio(&#39;Q19&#39;,this)"><input type="radio" name="Q19" value="实验室太死板了，一点点小问题也要卡"><span>实验室太死板了，一点点小问题也要卡</span></label><label class="option-item" onclick="selectRadio(&#39;Q19&#39;,this)"><input type="radio" name="Q19" value="实验室没说清楚到底要我改哪里"><span>实验室没说清楚到底要我改哪里</span></label><label class="option-item" onclick="selectRadio(&#39;Q19&#39;,this)"><input type="radio" name="Q19" value="我当时问过客户，但客户没说明白"><span>我当时问过客户，但客户没说明白</span></label><label class="option-item" onclick="selectRadio(&#39;Q19&#39;,this)"><input type="radio" name="Q19" value="让改就改，才不管对错"><span>让改就改，才不管对错</span></label></div></div><div class="question-card" id="card_Q20"><div class="q-header"><span class="q-num">Q20</span><span class="q-text">您是否了解实验室对样品接收的标准要求（如时限、环境、保密性）？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q20&#39;,this)"><input type="radio" name="Q20" value="非常清楚"><span>非常清楚</span></label><label class="option-item" onclick="selectRadio(&#39;Q20&#39;,this)"><input type="radio" name="Q20" value="了解大概"><span>了解大概</span></label><label class="option-item" onclick="selectRadio(&#39;Q20&#39;,this)"><input type="radio" name="Q20" value="不太清楚"><span>不太清楚</span></label><label class="option-item" onclick="selectRadio(&#39;Q20&#39;,this)"><input type="radio" name="Q20" value="完全不了解"><span>完全不了解</span></label></div></div><div class="question-card" id="card_Q21"><div class="q-header"><span class="q-num">Q21</span><span class="q-text">您认为现有的上岗/在岗培训是否能满足当前岗位需求？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q21&#39;,this)"><input type="radio" name="Q21" value="完全满足"><span>完全满足</span></label><label class="option-item" onclick="selectRadio(&#39;Q21&#39;,this)"><input type="radio" name="Q21" value="基本满足，但需要补充实操演练"><span>基本满足，但需要补充实操演练</span></label><label class="option-item" onclick="selectRadio(&#39;Q21&#39;,this)"><input type="radio" name="Q21" value="不太满足，针对性不强"><span>不太满足，针对性不强</span></label><label class="option-item" onclick="selectRadio(&#39;Q21&#39;,this)"><input type="radio" name="Q21" value="完全不能满足"><span>完全不能满足</span></label></div></div><div class="question-card" id="card_Q22"><div class="q-header"><span class="q-num">Q22</span><span class="q-text">您最希望在以下哪些方面获得培训或提升？（1=最需要，5=不需要）</span><span class="q-type">排序</span></div><table class="rank-table"><tbody><tr><td class="matrix-label" style="min-width:200px">质量管理体系基础知识</td><td><select class="rank-select" name="Q22_rank0" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr><tr><td class="matrix-label" style="min-width:200px">检测标准与方法</td><td><select class="rank-select" name="Q22_rank1" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr><tr><td class="matrix-label" style="min-width:200px">产品分类与基础知识</td><td><select class="rank-select" name="Q22_rank2" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr><tr><td class="matrix-label" style="min-width:200px">系统操作与信息化工具使用</td><td><select class="rank-select" name="Q22_rank3" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr><tr><td class="matrix-label" style="min-width:200px">客户沟通与投诉处理技巧</td><td><select class="rank-select" name="Q22_rank4" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr><tr><td class="matrix-label" style="min-width:200px">样品管理与实验室要求对接</td><td><select class="rank-select" name="Q22_rank5" onchange="validateRank(&#39;Q22&#39;,6);updateProgress()"><option value="">请选择排名</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></td></tr></tbody></table></div><div class="question-card" id="card_Q23"><div class="q-header"><span class="q-num">Q23</span><span class="q-text">您认为是否应该成立专业化、独立的业务受理团队？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q23&#39;,this)"><input type="radio" name="Q23" value="是"><span>是</span></label><label class="option-item" onclick="selectRadio(&#39;Q23&#39;,this)"><input type="radio" name="Q23" value="否"><span>否</span></label></div></div><div class="question-card" id="card_Q24"><div class="q-header"><span class="q-num">Q24</span><span class="q-text">您认为加强体系、标准、实操培训，能否有效改善现状？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q24&#39;,this)"><input type="radio" name="Q24" value="能从根本上解决"><span>能从根本上解决</span></label><label class="option-item" onclick="selectRadio(&#39;Q24&#39;,this)"><input type="radio" name="Q24" value="能显著改善"><span>能显著改善</span></label><label class="option-item" onclick="selectRadio(&#39;Q24&#39;,this)"><input type="radio" name="Q24" value="改善空间有限"><span>改善空间有限</span></label><label class="option-item" onclick="selectRadio(&#39;Q24&#39;,this)"><input type="radio" name="Q24" value="没改善"><span>没改善</span></label><label class="option-item" onclick="selectRadio(&#39;Q24&#39;,this)"><input type="radio" name="Q24" value="说不清"><span>说不清</span></label></div></div><div class="question-card" id="card_Q25"><div class="q-header"><span class="q-num">Q25</span><span class="q-text">您觉得目前业务受理与实验室之间的沟通效率如何？</span><span class="q-type">单选</span></div><div class="options-list"><label class="option-item" onclick="selectRadio(&#39;Q25&#39;,this)"><input type="radio" name="Q25" value="高效顺畅"><span>高效顺畅</span></label><label class="option-item" onclick="selectRadio(&#39;Q25&#39;,this)"><input type="radio" name="Q25" value="效率一般，偶有摩擦"><span>效率一般，偶有摩擦</span></label><label class="option-item" onclick="selectRadio(&#39;Q25&#39;,this)"><input type="radio" name="Q25" value="效率低下，经常争执"><span>效率低下，经常争执</span></label><label class="option-item" onclick="selectRadio(&#39;Q25&#39;,this)"><input type="radio" name="Q25" value="严重影响工作心情"><span>严重影响工作心情</span></label></div></div><div class="question-card" id="card_Q26"><div class="q-header"><span class="q-num">Q26</span><span class="q-text">您认为目前业务与实验室沟通频繁的主要原因是？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="业务受理人员对产品/标准不了解，需要反复确认"><span>业务受理人员对产品/标准不了解，需要反复确认</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="实验室人员对受理情况不了解，需要反复澄清"><span>实验室人员对受理情况不了解，需要反复澄清</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="缺少标准化的交接清单或核查表"><span>缺少标准化的交接清单或核查表</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="双方对同一标准的理解存在分歧"><span>双方对同一标准的理解存在分歧</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="客户需求临时变更，未及时同步"><span>客户需求临时变更，未及时同步</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q26" value="系统录入信息有限，不满足实验室检测需求"><span>系统录入信息有限，不满足实验室检测需求</span></label></div></div><div class="question-card" id="card_Q27"><div class="q-header"><span class="q-num">Q27</span><span class="q-text">您认为导致沟通成本高的主要原因是什么？</span><span class="q-type">多选</span></div><div class="options-list"><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="缺少统一的交接标准或标准操作规程"><span>缺少统一的交接标准或标准操作规程</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="双方专业背景不同，术语理解有差异"><span>双方专业背景不同，术语理解有差异</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="沟通渠道单一（只能靠电话/微信，缺少系统提示）"><span>沟通渠道单一（只能靠电话/微信，缺少系统提示）</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="受理人员过于频繁轮岗，业务不熟练"><span>受理人员过于频繁轮岗，业务不熟练</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="实验室任务太重，没耐心教"><span>实验室任务太重，没耐心教</span></label><label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="Q27" value="缺少自主学习，遇到问题（甚至重复性问题）习惯张嘴就问"><span>缺少自主学习，遇到问题（甚至重复性问题）习惯张嘴就问</span></label></div></div></form>
+    <div class="submit-area">
+      <button class="submit-btn" id="submitBtn" onclick="submitSurvey()">提交问卷</button>
+    </div>
+  </div>
+
+  <!-- Success -->
+  <div id="successPage" style="display:none" class="success-page">
+    <div class="icon">🎉</div>
+    <h2>感谢您的参与！</h2>
+    <p>您的回答已成功提交，我们会认真对待每一份反馈。</p>
+  </div>
+</div>
+
+<!-- Config Modal -->
+<div class="modal-overlay" id="configModal">
+  <div class="modal">
+    <h3>🔧 管理员配置</h3>
+    <div id="configAuth" style="">
+      <label>请输入管理员密码</label>
+      <input type="password" id="adminPwd" placeholder="请输入密码">
+      <div class="btn-row"><button class="btn btn-primary" onclick="verifyAdmin()">验证</button><button class="btn btn-secondary" onclick="closeModal(&#39;configModal&#39;)">取消</button></div>
+    </div>
+    <div id="configPanel" style="display:none">
+      <label>jsonbin.io API Key</label>
+      <input type="text" id="cfgApiKey" placeholder="$2a$10$...">
+      <label>Bin ID</label>
+      <input type="text" id="cfgBinId" placeholder="6xxxxx">
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="saveConfig()">保存配置</button>
+        <button class="btn btn-success" onclick="generateLink()">📋 生成填写者链接</button>
+        <button class="btn btn-secondary" onclick="closeModal(&#39;configModal&#39;)">关闭</button>
+      </div>
+      <div id="linkBox" style="display:none"><div class="link-box" id="linkContent"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Summary Modal -->
+<div class="modal-overlay" id="summaryModal">
+  <div class="modal" style="max-width:800px">
+    <h3>📊 数据汇总</h3>
+    <div id="summaryContent"><p>加载中...</p></div>
+    <div class="btn-row" style="margin-top:16px">
+      <button class="btn btn-primary" onclick="refreshSummary()">🔄 刷新数据</button>
+      <button class="btn btn-success" onclick="exportJSON()">导出 JSON</button>
+      <button class="btn btn-success" onclick="exportCSV()">导出 CSV</button>
+      <button class="btn btn-danger" onclick="clearCache()">清除本地缓存</button>
+      <button class="btn btn-secondary" onclick="closeModal(&#39;summaryModal&#39;)">关闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+const SURVEY_ID = 'survey_biz_accept_2026';
+const STORAGE_PREFIX = 'survey_biz_accept_2026';
+
+// ========== Questions Data ==========
+const questions = [
+  {id:'Q1',type:'radio',q:'您所在的部门',opts:['业务受理/大厅窗口','实验室','其他职能部门']},
+  {id:'Q2',type:'radio',q:'您在本岗位的工作年限',opts:['1年以下','1-3年','3-5年','5年以上']},
+  {id:'Q3',type:'radio',q:'您是否曾有过跨部门（实验室/业务受理）轮岗或借调的经历？',opts:['有，且时间较长（>3个月）','有，但时间较短（<3个月）','没有，但了解对方工作内容','完全没有接触过']},
+  {id:'Q4',type:'radio',q:'您与对方部门日常沟通的频率？',opts:['每天多次','每天1-2次','每周几次','很少沟通']},
+  {id:'Q5',type:'checkbox',q:'您与对方部门沟通的主要方式是？',opts:['当面沟通','电话','微信/工作群','书面交接单','其他']},
+  {id:'Q6',type:'radio',q:'您对每天沟通的感受？',opts:['对方立即解决问题，感觉很好','对方有情绪，不想沟通','说不清问题，反复沟通，很影响工作，很烦','一说问题需要逐级汇报，等到天荒地老','天天都是一样的问题，沟通没有改善，真不想沟通']},
+  {id:'Q7',type:'radio',q:'您是否了解本机构现行的质量管理体系？',opts:['非常了解，能清晰说出主要框架','了解基本概念，大概知道有这些文件','知道有体系这回事，但不太清楚具体内容','完全不了解，甚至没听说过']},
+  {id:'Q8',type:'radio',q:'您是否清楚与自己岗位相关的体系文件（如《程序文件》《作业指导书》）的具体名称和编号？',opts:['清楚，能准确说出2个以上','知道大概有相关文件，但说不出来具体内容','不清楚，从未关注过体系文件']},
+  {id:'Q9',type:'radio',q:'当遇到客户要求、受理信息与检测标准要求冲突时（如样品量不够、方法不合适等），您是否能独立依据体系要求判断"做不了"并合理解释给客户？',opts:['完全可以，我能独立判断并解释法规依据','基本可以，遇到特别复杂的需要请教质量/技术负责人','不太行，我拿不准哪些能做哪些不能做','完全不行，我会直接找实验室或技术质量管理部']},
+  {id:'Q10',type:'radio',q:'您是否清楚本机构针对业务受理环节的"质量目标"（如差错率、客户满意度、受理时限等）具体是多少？',opts:['非常清楚，知道具体数值','有印象，但不记得具体数','没听说过有这类指标','不太关心']},
+  {id:'Q11',type:'radio',q:'您了解单位的资质情况吗？受理时会考虑资质范围吗？',opts:['了解，受理时会核查资质情况，避免超范围','大概了解，常做的清楚，需要时会问一下资质情况','不了解，如果有问题实验室或报告会反馈，等反馈','不太关心']},
+  {id:'Q12',type:'radio',q:'您在新规定（例："一单一库"）出台后主动学习吗？',opts:['主动学习','别人咋受理我跟着受理，具体内容不了解','不关心']},
+  {id:'Q13',type:'matrix',q:'请根据您对以下专业知识的掌握程度进行自评：',
+    items:['产品/样品的分类及命名规则（例如机织物、针织物、非织造布；服装用、家用、工业用纺织品）','常用检测方法标准的编号与适用范围','不同产品对应的强制性标准清单及主要指标','取样方法与样品量基础知识','实验室常见检测项目的技术原理（如pH、甲醛、色牢度基本含义）','仪器设备对样品状态的基本要求（如温湿度平衡、样品尺寸）'],
+    opts:['掌握较好可独立运用','大概了解需要时能查资料','基本不懂遇到就求助','认为不属于职责范围']},
+  {id:'Q14',type:'radio',q:'当客户口头描述一种产品（如"儿童T恤"、"休闲鞋"），您是否能快速判断出需要引用哪些强制性标准和产品标准？',opts:['完全可以，能迅速对应到具体标准','基本可以，能想到大类但需要查标准号','不太能，只能模糊判断需要反复问实验室或其他受理人员','完全不行']},
+  {id:'Q15',type:'checkbox',q:'您获取检测标准知识的主要渠道是？',opts:['入职培训','在工作中遇到问题向实验室请教','在工作中遇到问题向其他业务受理人员请教','自己主动查阅标准文件','参加单位组织的技术培训','很少主动学习这方面知识']},
+  {id:'Q16',type:'radio',q:'在受理一项不常见产品的检测委托时，您通常的做法是？',opts:['自行查阅标准文件后判定受理条件','电话或当面咨询对应专业实验室的技术人员','参考历史委托单按同样要求操作','先受理下来，等实验室打回沟通的为准','不确定，随机应变']},
+  {id:'Q17',type:'checkbox',q:'在将检测任务交接给实验室前，您通常如何确认样品信息？',opts:['严格按照委托单逐项核对','凭经验判断，确认重点项目','遇到模糊描述时，习惯先提交，由实验室反馈后再修改','直接打电话问实验室该怎么做']},
+  {id:'Q18',type:'checkbox',q:'在向实验室移交样品和委托单时，您觉得最困难/最容易出错的环节是？',opts:['样品信息描述不规范','分板不准确','检测方法/标准选择错误（易混淆的国标/行标）','样品数量不足或状态不符合要求','客户特殊要求记录不清','标准有偏离不会备注','系统录入时关键信息漏填']},
+  {id:'Q19',type:'radio',q:'当实验室退回或质疑您的受理信息时，您通常的感觉是？',opts:['确实是我不小心弄错了，马上改','实验室太死板了，一点点小问题也要卡','实验室没说清楚到底要我改哪里','我当时问过客户，但客户没说明白','让改就改，才不管对错']},
+  {id:'Q20',type:'radio',q:'您是否了解实验室对样品接收的标准要求（如时限、环境、保密性）？',opts:['非常清楚','了解大概','不太清楚','完全不了解']},
+  {id:'Q21',type:'radio',q:'您认为现有的上岗/在岗培训是否能满足当前岗位需求？',opts:['完全满足','基本满足，但需要补充实操演练','不太满足，针对性不强','完全不能满足']},
+  {id:'Q22',type:'rank',q:'您最希望在以下哪些方面获得培训或提升？（1=最需要，5=不需要）',
+    items:['质量管理体系基础知识','检测标准与方法','产品分类与基础知识','系统操作与信息化工具使用','客户沟通与投诉处理技巧','样品管理与实验室要求对接']},
+  {id:'Q23',type:'radio',q:'您认为是否应该成立专业化、独立的业务受理团队？',opts:['是','否']},
+  {id:'Q24',type:'radio',q:'您认为加强体系、标准、实操培训，能否有效改善现状？',opts:['能从根本上解决','能显著改善','改善空间有限','没改善','说不清']},
+  {id:'Q25',type:'radio',q:'您觉得目前业务受理与实验室之间的沟通效率如何？',opts:['高效顺畅','效率一般，偶有摩擦','效率低下，经常争执','严重影响工作心情']},
+  {id:'Q26',type:'checkbox',q:'您认为目前业务与实验室沟通频繁的主要原因是？',opts:['业务受理人员对产品/标准不了解，需要反复确认','实验室人员对受理情况不了解，需要反复澄清','缺少标准化的交接清单或核查表','双方对同一标准的理解存在分歧','客户需求临时变更，未及时同步','系统录入信息有限，不满足实验室检测需求']},
+  {id:'Q27',type:'checkbox',q:'您认为导致沟通成本高的主要原因是什么？',opts:['缺少统一的交接标准或标准操作规程','双方专业背景不同，术语理解有差异','沟通渠道单一（只能靠电话/微信，缺少系统提示）','受理人员过于频繁轮岗，业务不熟练','实验室任务太重，没耐心教','缺少自主学习，遇到问题（甚至重复性问题）习惯张嘴就问']}
+];
+
+// ========== State ==========
+let config = {k:'$2a$10$x5M/XZ4f0bJXeqYzBcEqgOF8fMYvBDwxQ40POkhIdQJsGYBkVt7VC',b:'6a86ba76f5f4af5e292c2a9a'};
+let isAdmin = false;
+let surveyData = null;
+let cloudData = null;
+
+// ========== Init ==========
+window.addEventListener('DOMContentLoaded', async () => {
+  // Load config from URL hash or localStorage
+  const hash = location.hash;
+  if(hash.startsWith('#config=')){
+    try{
+      const c = JSON.parse(atob(hash.slice(8)));
+      config.k = c.k||''; config.b = c.b||'';
+      localStorage.setItem(STORAGE_PREFIX+'_config', JSON.stringify(config));
+    }catch(e){}
+  } else {
+    try{ const s=JSON.parse(localStorage.getItem(STORAGE_PREFIX+'_config')); if(s){config.k=s.k;config.b=s.b;} }catch(e){}
+  }
+
+  // Check if already submitted
+  if(localStorage.getItem(STORAGE_PREFIX+'_submitted')==='true'){
+    document.getElementById('loadingPage').style.display='none';
+    document.getElementById('alreadyPage').style.display='block';
+    return;
+  }
+
+  // Render survey
+  renderSurvey();
+  document.getElementById('loadingPage').style.display='none';
+  document.getElementById('surveyPage').style.display='block';
+  updateProgress();
+});
+
+// ========== Render ==========
+function renderSurvey(){
+  const form = document.getElementById('surveyForm');
+  let html = '';
+  questions.forEach((q,i) => {
+    html += `<div class="question-card" id="card_${q.id}">`;
+    html += `<div class="q-header"><span class="q-num">${q.id}</span><span class="q-text">${q.q}</span><span class="q-type">${typeLabel(q.type)}</span></div>`;
+    if(q.type==='radio'){
+      html += '<div class="options-list">';
+      q.opts.forEach((o,j) => {
+        html += `<label class="option-item" onclick="selectRadio('${q.id}',this)"><input type="radio" name="${q.id}" value="${o}"><span>${o}</span></label>`;
+      });
+      html += '</div>';
+    } else if(q.type==='checkbox'){
+      html += '<div class="options-list">';
+      q.opts.forEach((o,j) => {
+        html += `<label class="option-item" onclick="toggleCheckbox(this)"><input type="checkbox" name="${q.id}" value="${o}"><span>${o}</span></label>`;
+      });
+      html += '</div>';
+    } else if(q.type==='matrix'){
+      html += '<div style="overflow-x:auto"><table class="matrix-table"><thead><tr><th class="matrix-label">评估项目</th>';
+      q.opts.forEach(o => html += `<th>${o}</th>`);
+      html += '</tr></thead><tbody>';
+      q.items.forEach((item,ii) => {
+        html += `<tr><td class="matrix-label">${item}</td>`;
+        q.opts.forEach((o,jj) => {
+          html += `<td><input type="radio" name="${q.id}_item${ii}" value="${o}" onchange="updateProgress()"></td>`;
+        });
+        html += '</tr>';
+      });
+      html += '</tbody></table></div>';
+    } else if(q.type==='rank'){
+      html += '<table class="rank-table">';
+      q.items.forEach((item,ii) => {
+        html += `<tr><td class="matrix-label" style="min-width:200px">${item}</td><td><select class="rank-select" name="${q.id}_rank${ii}" onchange="validateRank('${q.id}',${q.items.length});updateProgress()"><option value="">请选择排名</option>`;
+        for(let r=1;r<=q.items.length;r++) html += `<option value="${r}">${r}</option>`;
+        html += '</select></td></tr>';
+      });
+      html += '</table>';
+    } else if(q.type==='textarea'){
+      html += `<textarea name="${q.id}" placeholder="请输入您的回答..." oninput="updateProgress()"></textarea>`;
+    }
+    html += '</div>';
+  });
+  form.innerHTML = html;
+}
+
+function typeLabel(t){return {radio:'单选',checkbox:'多选',matrix:'自评',rank:'排序',textarea:'填空'}[t]||t}
+
+function selectRadio(qid,el){
+  el.closest('.options-list').querySelectorAll('.option-item').forEach(e=>e.classList.remove('selected'));
+  el.classList.add('selected');
+  updateProgress();
+}
+function toggleCheckbox(el){
+  setTimeout(()=>{
+    const checked = el.querySelector('input').checked;
+    el.classList.toggle('selected',checked);
+    updateProgress();
+  },0);
+}
+
+function validateRank(qid,total){
+  const vals=[];
+  for(let i=0;i<total;i++){
+    const v=document.querySelector(`select[name="${qid}_rank${i}"]`).value;
+    if(v) vals.push(parseInt(v));
+  }
+  const dupes=vals.filter((v,i)=>vals.indexOf(v)!==i);
+  if(dupes.length>0) showToast('排名不能重复，请检查','error');
+}
+
+// ========== Progress ==========
+function updateProgress(){
+  let answered=0;
+  questions.forEach(q=>{
+    if(q.type==='radio'){
+      if(document.querySelector(`input[name="${q.id}"]:checked`)) answered++;
+    } else if(q.type==='checkbox'){
+      if(document.querySelectorAll(`input[name="${q.id}"]:checked`).length>0) answered++;
+    } else if(q.type==='matrix'){
+      const rows=q.items.length; let allDone=true;
+      for(let i=0;i<rows;i++){if(!document.querySelector(`input[name="${q.id}_item${i}"]:checked`)){allDone=false;break;}}
+      if(allDone) answered++;
+    } else if(q.type==='rank'){
+      const rows=q.items.length; let allDone=true;
+      for(let i=0;i<rows;i++){if(!document.querySelector(`select[name="${q.id}_rank${i}"]`).value){allDone=false;break;}}
+      if(allDone) answered++;
+    } else if(q.type==='textarea'){
+      if(document.querySelector(`textarea[name="${q.id}"]`).value.trim()) answered++;
+    }
+  });
+  const pct = Math.round(answered/questions.length*100);
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressText').textContent=`${answered} / ${questions.length} 已作答 (${pct}%)`;
+}
+
+// ========== Collect Answers ==========
+function collectAnswers(){
+  const answers={};
+  questions.forEach(q=>{
+    if(q.type==='radio'){
+      const el=document.querySelector(`input[name="${q.id}"]:checked`);
+      answers[q.id]=el?el.value:'';
+    } else if(q.type==='checkbox'){
+      answers[q.id]=[...document.querySelectorAll(`input[name="${q.id}"]:checked`)].map(e=>e.value);
+    } else if(q.type==='matrix'){
+      const obj={};
+      q.items.forEach((item,i)=>{
+        const el=document.querySelector(`input[name="${q.id}_item${i}"]:checked`);
+        obj[item]=el?el.value:'';
+      });
+      answers[q.id]=obj;
+    } else if(q.type==='rank'){
+      const obj={};
+      q.items.forEach((item,i)=>{
+        obj[item]=document.querySelector(`select[name="${q.id}_rank${i}"]`).value;
+      });
+      answers[q.id]=obj;
+    } else if(q.type==='textarea'){
+      answers[q.id]=document.querySelector(`textarea[name="${q.id}"]`).value;
+    }
+  });
+  return answers;
+}
+
+// ========== Fingerprint ==========
+function getFingerprint(){
+  const parts=[navigator.userAgent,screen.width+'x'+screen.height,Intl.DateTimeFormat().resolvedOptions().timeZone,navigator.language];
+  let h=0;const s=parts.join('|');
+  for(let i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0;}
+  return 'fp_'+Math.abs(h).toString(36)+'_'+s.length;
+}
+
+// ========== Submit ==========
+async function submitSurvey(){
+  const btn=document.getElementById('submitBtn');
+  btn.disabled=true;btn.innerHTML='<span class="loading"></span>提交中...';
+
+  try{
+    const fp=getFingerprint();
+    const answers=collectAnswers();
+    const ts=new Date().toISOString();
+
+    // Read cloud data
+    let data={responses:[]};
+    if(config.k && config.b){
+      try{
+        const res=await fetch(`https://api.jsonbin.io/v3/b/${config.b}/latest`,{headers:{'X-Master-Key':config.k}});
+        if(res.ok){const j=await res.json();if(j.record&&j.record.responses)data=j.record;}
+      }catch(e){}
+      // Check duplicate
+      if(data.responses.some(r=>r.fingerprint===fp)){
+        showToast('您已提交过问卷，请勿重复提交','error');
+        btn.disabled=false;btn.textContent='提交问卷';
+        return;
+      }
+    }
+
+    data.responses.push({fingerprint:fp,timestamp:ts,answers:answers});
+
+    // Write back
+    if(config.k && config.b){
+      const res=await fetch(`https://api.jsonbin.io/v3/b/${config.b}`,{
+        method:'PUT',
+        headers:{'X-Master-Key':config.k,'X-Bin-Make-Public':'true','Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      });
+      if(!res.ok) throw new Error('提交失败: '+res.status);
+    }
+
+    // Mark submitted
+    localStorage.setItem(STORAGE_PREFIX+'_submitted','true');
+    localStorage.setItem(STORAGE_PREFIX+'_fp',fp);
+
+    document.getElementById('surveyPage').style.display='none';
+    document.getElementById('successPage').style.display='block';
+    showToast('提交成功！感谢您的参与','success');
+  }catch(e){
+    showToast('提交失败: '+e.message,'error');
+    btn.disabled=false;btn.textContent='提交问卷';
+  }
+}
+
+// ========== Admin ==========
+function showConfigModal(){
+  document.getElementById('configModal').classList.add('active');
+  document.getElementById('configAuth').style.display=isAdmin?'none':'block';
+  document.getElementById('configPanel').style.display=isAdmin?'block':'none';
+  if(isAdmin){
+    document.getElementById('cfgApiKey').value=config.k;
+    document.getElementById('cfgBinId').value=config.b;
+  }
+}
+function verifyAdmin(){
+  if(document.getElementById('adminPwd').value==='jstj2026'){
+    isAdmin=true;
+    document.getElementById('configAuth').style.display='none';
+    document.getElementById('configPanel').style.display='block';
+    document.getElementById('summaryBtn').style.display='inline-block';
+    document.getElementById('cfgApiKey').value=config.k;
+    document.getElementById('cfgBinId').value=config.b;
+    showToast('管理员验证成功','success');
+  } else {
+    showToast('密码错误','error');
+  }
+}
+function saveConfig(){
+  config.k=document.getElementById('cfgApiKey').value.trim();
+  config.b=document.getElementById('cfgBinId').value.trim();
+  localStorage.setItem(STORAGE_PREFIX+'_config',JSON.stringify(config));
+  showToast('配置已保存','success');
+}
+function generateLink(){
+  saveConfig();
+  const encoded=btoa(JSON.stringify({k:config.k,b:config.b}));
+  const link=location.origin+location.pathname+'#config='+encoded;
+  document.getElementById('linkBox').style.display='block';
+  document.getElementById('linkContent').textContent=link;
+  // Copy to clipboard
+  navigator.clipboard.writeText(link).then(()=>showToast('链接已复制到剪贴板','success')).catch(()=>{});
+}
+function closeModal(id){document.getElementById(id).classList.remove('active')}
+
+// ========== Summary ==========
+async function showSummaryModal(){
+  document.getElementById('summaryModal').classList.add('active');
+  document.getElementById('summaryContent').innerHTML='<p>正在加载数据...</p>';
+  await refreshSummary();
+}
+
+async function refreshSummary(){
+  if(!config.k||!config.b){document.getElementById('summaryContent').innerHTML='<p>请先配置 API Key 和 Bin ID</p>';return;}
+  try{
+    const res=await fetch(`https://api.jsonbin.io/v3/b/${config.b}/latest`,{headers:{'X-Master-Key':config.k}});
+    if(!res.ok) throw new Error('读取失败');
+    const j=await res.json();
+    cloudData=j.record||{responses:[]};
+    renderSummary(cloudData);
+  }catch(e){
+    document.getElementById('summaryContent').innerHTML='<p>加载失败: '+e.message+'</p>';
+  }
+}
+
+function renderSummary(data){
+  const total=data.responses.length;
+  let html=`<p style="font-size:16px;font-weight:600;margin-bottom:16px">📋 总提交人数：<span style="color:#3b82f6;font-size:24px">${total}</span></p>`;
+  if(total===0){html+='<p>暂无数据</p>';document.getElementById('summaryContent').innerHTML=html;return;}
+
+  questions.forEach(q=>{
+    html+=`<div class="summary-section"><h4>${q.id}. ${q.q} [${typeLabel(q.type)}]</h4>`;
+    if(q.type==='radio'){
+      html+=renderRadioSummary(q,data);
+    } else if(q.type==='checkbox'){
+      html+=renderCheckboxSummary(q,data);
+    } else if(q.type==='matrix'){
+      html+=renderMatrixSummary(q,data);
+    } else if(q.type==='rank'){
+      html+=renderRankSummary(q,data);
+    } else if(q.type==='textarea'){
+      html+=renderTextSummary(q,data);
+    }
+    html+='</div>';
+  });
+
+  document.getElementById('summaryContent').innerHTML=html;
+}
+
+function renderRadioSummary(q,data){
+  const counts={};q.opts.forEach(o=>counts[o]=0);
+  data.responses.forEach(r=>{const v=r.answers[q.id];if(v&&counts.hasOwnProperty(v))counts[v]++;});
+  const total=data.responses.length;
+  let h='<div style="margin-top:8px">';
+  const colors=['colors-0','colors-1','colors-2','colors-3','colors-4','colors-5'];
+  q.opts.forEach((o,i)=>{
+    const pct=total?Math.round(counts[o]/total*100):0;
+    h+=`<div class="stat-bar-wrap"><div class="stat-bar-label"><span>${o}</span><span>${counts[o]}人 (${pct}%)</span></div><div class="stat-bar"><div class="stat-bar-fill ${colors[i%6]}" style="width:${Math.max(pct,2)}%">${pct>8?pct+'%':''}</div></div></div>`;
+  });
+  h+='</div>';return h;
+}
+
+function renderCheckboxSummary(q,data){
+  const counts={};q.opts.forEach(o=>counts[o]=0);
+  data.responses.forEach(r=>{const v=r.answers[q.id];if(Array.isArray(v))v.forEach(x=>{if(counts.hasOwnProperty(x))counts[x]++;});});
+  const total=data.responses.length;
+  let h='<div style="margin-top:8px">';
+  const colors=['colors-0','colors-1','colors-2','colors-3','colors-4','colors-5'];
+  q.opts.forEach((o,i)=>{
+    const pct=total?Math.round(counts[o]/total*100):0;
+    h+=`<div class="stat-bar-wrap"><div class="stat-bar-label"><span>${o}</span><span>${counts[o]}人次 (${pct}%)</span></div><div class="stat-bar"><div class="stat-bar-fill ${colors[i%6]}" style="width:${Math.max(pct,2)}%">${pct>8?pct+'%':''}</div></div></div>`;
+  });
+  h+='</div>';return h;
+}
+
+function renderMatrixSummary(q,data){
+  let h='<div style="overflow-x:auto;margin-top:8px"><table class="matrix-table" style="font-size:12px"><thead><tr><th>项目</th>';
+  q.opts.forEach(o=>h+=`<th>${o}</th>`);
+  h+='</tr></thead><tbody>';
+  q.items.forEach(item=>{
+    const counts={};q.opts.forEach(o=>counts[o]=0);
+    data.responses.forEach(r=>{const v=r.answers[q.id];if(v&&v[item])counts[v[item]]++;});
+    h+=`<tr><td class="matrix-label">${item}</td>`;
+    q.opts.forEach(o=>h+=`<td>${counts[o]}</td>`);
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';return h;
+}
+
+function renderRankSummary(q,data){
+  const sums={};const cnts={};
+  q.items.forEach(item=>{sums[item]=0;cnts[item]=0;});
+  data.responses.forEach(r=>{const v=r.answers[q.id];if(v){Object.entries(v).forEach(([k,val])=>{if(val){sums[k]+=parseInt(val);cnts[k]++;}});}});
+  let h='<div style="margin-top:8px">';
+  q.items.forEach(item=>{
+    const avg=cnts[item]?((sums[item]/cnts[item]).toFixed(1)):'-';
+    h+=`<div style="margin-bottom:6px;font-size:13px"><strong>${item}</strong> — 平均排名: <span style="color:#3b82f6;font-weight:600">${avg}</span></div>`;
+  });
+  h+='</div>';return h;
+}
+
+function renderTextSummary(q,data){
+  let h='<div style="margin-top:8px">';
+  data.responses.forEach((r,i)=>{
+    const v=r.answers[q.id];
+    if(v) h+=`<div style="padding:6px 10px;background:#fff;border-radius:6px;margin-bottom:4px;font-size:13px;border:1px solid #e2e8f0">${i+1}. ${v}</div>`;
+  });
+  h+='</div>';return h;
+}
+
+// ========== Export ==========
+function exportJSON(){
+  if(!cloudData||!cloudData.responses.length){showToast('暂无数据','error');return;}
+  const blob=new Blob([JSON.stringify(cloudData,null,2)],{type:'application/json'});
+  downloadBlob(blob, SURVEY_ID+'.json');
+}
+
+function exportCSV(){
+  if(!cloudData||!cloudData.responses.length){showToast('暂无数据','error');return;}
+  // Build flat columns
+  const cols=['fingerprint','timestamp'];
+  questions.forEach(q=>{
+    if(q.type==='matrix'){q.items.forEach(item=>cols.push(q.id+'_'+item));}
+    else if(q.type==='rank'){q.items.forEach(item=>cols.push(q.id+'_'+item));}
+    else cols.push(q.id);
+  });
+  let csv=cols.map(c=>'"'+c.replace(/"/g,'""')+'"').join(',')+'\n';
+  cloudData.responses.forEach(r=>{
+    const row=[];
+    row.push(r.fingerprint||'',r.timestamp||'');
+    questions.forEach(q=>{
+      const a=r.answers||{};
+      if(q.type==='matrix'||q.type==='rank'){
+        q.items.forEach(item=>{
+          const v=(a[q.id]&&a[q.id][item])||'';
+          row.push(String(v).replace(/"/g,'""'));
+        });
+      } else if(q.type==='checkbox'){
+        row.push(Array.isArray(a[q.id])?a[q.id].join(';').replace(/"/g,'""'):'');
+      } else {
+        row.push(String(a[q.id]||'').replace(/"/g,'""'));
+      }
+    });
+    csv+=row.map(c=>'"'+c+'"').join(',')+'\n';
+  });
+  const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'});
+  downloadBlob(blob, SURVEY_ID+'.csv');
+}
+
+function downloadBlob(blob,name){
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();URL.revokeObjectURL(a.href);
+}
+
+function clearCache(){
+  localStorage.removeItem(STORAGE_PREFIX+'_submitted');
+  localStorage.removeItem(STORAGE_PREFIX+'_fp');
+  showToast('本地缓存已清除','success');
+}
+
+// ========== Toast ==========
+function showToast(msg,type){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.className='toast toast-'+(type||'info');
+  t.style.display='block';
+  setTimeout(()=>t.style.display='none',3000);
+}
+</script>
+
+</body></html>
